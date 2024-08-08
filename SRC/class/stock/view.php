@@ -39,15 +39,11 @@ function subStockView($param)
 					</td>
 					<th>距離</th>
 					<td>
-						<?php
-						for ($i = 0; $i < 27; $i++) {
-						?>
+						<?php for ($i = 0; $i < 4; $i++) { ?>
 							<input type="checkbox" name="sDistance[]" value="<?php print $i + 1; ?>" <?php for ($j = 0; $j < 4; $j++) {
 																											if ($param["sDistance"][$j] == $i + 1) print ' checked="checked"';
 																										} ?> /> <?php print fnRankName($i) ?>
-						<?php
-						}
-						?>
+						<?php } ?>
 					</td>
 				</tr>
 				<tr>
@@ -59,15 +55,11 @@ function subStockView($param)
 				<tr>
 					<th>ランク</th>
 					<td>
-						<?php
-						for ($i = 0; $i < 27; $i++) {
-						?>
+						<?php for ($i = 0; $i < 5; $i++) { ?>
 							<input type="checkbox" name="sRank[]" value="<?php print $i + 1; ?>" <?php for ($j = 0; $j < 5; $j++) {
 																										if ($param["sRank"][$j] == $i + 1) print ' checked="checked"';
 																									} ?> /> <?php print fnRankName($i) ?>
-						<?php
-						}
-						?>
+						<?php } ?>
 					</td>
 					<th>店舗名</th>
 					<td><input type="text" name="sStore" value="<?php print $param["sStore"] ?>" size="30" /></td>
@@ -93,9 +85,7 @@ function subStockView($param)
 					</td>
 					<th>仕入経緯</th>
 					<td>
-						<?php
-						for ($i = 0; $i < 6; $i++) {
-						?>
+						<?php for ($i = 0; $i < 6; $i++) { ?>
 							<input type="checkbox" name="sHow[]" value="<?php print $i + 1; ?>" <?php for ($j = 0; $j < 6; $j++) {
 																									if ($param["sHow"][$j] == $i + 1) print ' checked="checked"';
 																								} ?> /> <?php print fnHowName($i); ?>
@@ -254,13 +244,9 @@ function subStockEditView($param)
 			<tr>
 				<th>ランク</th>
 				<td>
-					<?php
-					for ($i = 0; $i < 5; $i++) {
-					?>
+					<?php for ($i = 0; $i < 5; $i++) { ?>
 						<input type="radio" name="rank" value="<?php print $i + 1; ?>" <?php if ($param["rank"] == $i + 1) print ' checked="checked"'; ?> /> <?php print fnRankName($i); ?>
-					<?php
-					}
-					?>
+					<?php } ?>
 				</td>
 			</tr>
 			<tr>
@@ -286,13 +272,9 @@ function subStockEditView($param)
 			<tr>
 				<th>距離</th>
 				<td>
-					<?php
-					for ($i = 0; $i < 4; $i++) {
-					?>
+					<?php for ($i = 0; $i < 4; $i++) { ?>
 						<input type="radio" name="distance" value="<?php print $i + 1; ?>" <?php if ($param["distance"] == $i + 1) print ' checked="checked"'; ?> /> <?php print fnDistanceName($i); ?>
-					<?php
-					}
-					?>
+					<?php } ?>
 				</td>
 			</tr>
 			<tr>
