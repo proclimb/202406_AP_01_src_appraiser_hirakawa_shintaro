@@ -310,14 +310,11 @@ function subStockEditView($param)
 			<tr>
 				<th>仕入経緯</th>
 				<td>
-					<?php
-					for ($i = 0; $i < 6; $i++) {
-					?>
+					<?php if (!$param["stockNo"]) $param["how"] = 1 ?>
+					<?php for ($i = 0; $i < 6; $i++) { ?>
 						<br />
-						<input type="radio" name="how" value="<?php print $i + 1; ?>" <?php if ($param["how"] == $i) print 'checked' ?> /> <?php print fnHowName($i); ?>
-					<?php
-					}
-					?>
+						<input type="radio" name="how" value="<?php print $i + 1; ?>" <?php if (($param["how"] - 1) == $i) print 'checked' ?> /> <?php print fnHowName($i); ?>
+					<?php } ?>
 				</td>
 			</tr>
 
