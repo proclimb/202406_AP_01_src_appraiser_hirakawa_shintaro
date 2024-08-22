@@ -55,10 +55,12 @@ function fnArticleEditCheck() {
 		return;
 	}
 
-
-	form.act.value = 'articleEditComplete';
-	form.submit();
+	if (confirm('この内容で登録します。よろしいですか？')) {
+		form.act.value = 'articleEditComplete';
+		form.submit();
+	}
 }
+
 
 
 
